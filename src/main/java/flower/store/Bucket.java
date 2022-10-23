@@ -4,28 +4,28 @@ import java.util.ArrayList;
 
 public class Bucket implements IPricidyPrice {
 
-	private ArrayList<IPricidyPrice> _pricidyPrices;
+    private ArrayList<IPricidyPrice> pricidyPrices;
 
-	public boolean add(IPricidyPrice pricidyPrice) {
-		return this._pricidyPrices.add(pricidyPrice);
-	}
+    public Bucket() {
+        this.pricidyPrices = new ArrayList<>();
+    }
 
-	public ArrayList<IPricidyPrice> getPricidyPrices() {
-		return this._pricidyPrices;
-	}
+    public boolean add(IPricidyPrice pricidyPrice) {
+        return this.pricidyPrices.add(pricidyPrice);
+    }
 
-	@Override
-	public double getPrice() {
-		double sum = 0.0;
+    public ArrayList<IPricidyPrice> getPricidyPrices() {
+        return this.pricidyPrices;
+    }
 
-		for (IPricidyPrice pricidyPrice : this._pricidyPrices) {
-			sum += pricidyPrice.getPrice();
-		}
+    @Override
+    public double getPrice() {
+        double sum = 0.0;
 
-		return sum;
-	}
+        for (IPricidyPrice pricidyPrice : this.pricidyPrices) {
+            sum += pricidyPrice.getPrice();
+        }
 
-	public Bucket() {
-		this._pricidyPrices = new ArrayList<>();
-	}
+        return sum;
+    }
 }

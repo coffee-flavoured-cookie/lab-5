@@ -24,7 +24,9 @@ public class FlowerBucketTest {
         int quantity = RANDOM_GENERATOR.nextInt(MAX_QUANTITY);
         
         Flower flower = new Flower("Rose");
-        flower.setPrice(10);
+
+        int magicLinterNumberNowBecomesUnmagic = 10;
+        flower.setPrice(magicLinterNumberNowBecomesUnmagic);
         
         FlowerPack flowerPack = new FlowerPack(flower, quantity);
         flowerBucket.add(flowerPack);

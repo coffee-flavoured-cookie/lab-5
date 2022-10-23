@@ -4,7 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class StoreTest {
-	@BeforeEach
+    @BeforeEach
     public void init() {
     }
 
