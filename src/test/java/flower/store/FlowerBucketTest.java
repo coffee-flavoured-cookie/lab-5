@@ -10,6 +10,7 @@ public class FlowerBucketTest {
     private static final Random RANDOM_GENERATOR = new Random();
     private static final int MAX_QUANTITY = 1000;
     private static final int MAX_PRICE = 100;
+    private static final int NOT_A_MAGIC_NUMBER_10 = 10;
 
     private Bucket flowerBucket;
 
@@ -25,7 +26,7 @@ public class FlowerBucketTest {
         
         Flower flower = new Flower("Rose");
 
-        int magicLinterNumberNowBecomesUnmagic = 10;
+        int magicLinterNumberNowBecomesUnmagic = NOT_A_MAGIC_NUMBER_10;
         flower.setPrice(magicLinterNumberNowBecomesUnmagic);
         
         FlowerPack flowerPack = new FlowerPack(flower, quantity);
