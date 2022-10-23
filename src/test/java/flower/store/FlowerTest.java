@@ -14,7 +14,7 @@ public class FlowerTest {
 
     @BeforeEach
     public void init() {
-        flower = new Flower();
+        flower = new Flower("Undefined-c-235");
     }
 
     @Test
@@ -26,8 +26,7 @@ public class FlowerTest {
 
     @Test
     public void testColor() {
-        FlowerColor color = FlowerColor.RED;
-        flower.setColor(color);
+        flower.setColor("#FF0000");
         Assertions.assertEquals("#FF0000", flower.getColor());
     }
 }
